@@ -19,8 +19,10 @@ function SearchWord() {
     }
 
     const wordElement = data.map((word, index) => {
-        return <Word key={index} word={word.word} phonetic={word.phonetic}/>
+        return <Word key={index} word={word} />
     })
+
+   
         
     return(
         <section>

@@ -1,10 +1,15 @@
 function Word(props) {
+   //mapa meanings etc
+   const {word, phonetic} = props.word
+
     return(
-        <>
-        <h3>{props.word}</h3>
-        <p>{props.phonetic}</p>
+        <section>
+        <h3>{word}</h3>
+        <p>{phonetic}</p>
+
         
-        </>
+        
+        </section>
     )
 }
 
