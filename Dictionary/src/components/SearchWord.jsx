@@ -7,9 +7,9 @@ function SearchWord() {
     async function handleClick() {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
         const data = await response.json()
-        console.log(data);
+        console.log(data[0].meanings);
 
-        setData()
+        setData(data)
         console.log('ordet är', word);
     }
 
