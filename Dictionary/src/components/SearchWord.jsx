@@ -10,6 +10,7 @@ function SearchWord() {
         console.log(data);
 
         setData()
+        console.log('ordet är', word);
     }
 
     return(
