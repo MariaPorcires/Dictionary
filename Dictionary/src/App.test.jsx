@@ -15,9 +15,12 @@ describe('something truthy and falsy', () => {
 describe('App', () => {
     it('renders headline', () => {
       render(<App title="React" />);
-  
       screen.debug();
-  
       // check if App components renders headline
     });
   });
+
+  it("should render Mary's dictonary text", () => {
+    render(<App />);
+    expect(screen.getByText("Mary's dictionary")).toBeInTheDocument();
+  })
