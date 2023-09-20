@@ -20,5 +20,12 @@ it("should render inputtext when button is clicked", async () => {
     expect(textbox).toHaveValue('Hello');
 })
 
+it("should display errormessage when button clicked without writing in input", async () => {
+    render(<SearchWord />)
+    const button = screen.getByRole('button');
+    await userEvent.click(button);
+    expect(await screen.findByText("Please enter a word to search")).toBeInTheDocument()
+})
+
 //test att input ska vara tomt efter knapp
 //test att errormeddelande ska visas vid tom sökning

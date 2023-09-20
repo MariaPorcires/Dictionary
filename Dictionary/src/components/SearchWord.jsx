@@ -8,7 +8,7 @@ function SearchWord() {
 
     async function handleClick() {
         if(word.trim() === '') {
-            setErrorMessage('Please enter a word to search.');
+            setErrorMessage('Please enter a word to search');
       return;
         }
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
@@ -20,17 +20,15 @@ function SearchWord() {
             setErrorMessage('');
         } else {
             setData([]);
-            setErrorMessage('Word not found.');
+            setErrorMessage('No Definitions Found.');
         }
+        setWord('');
         console.log('ordet är', data);
     }
 
     const wordElement = data.map((word, index) => {
         return <Word key={index} word={word} />
     })
-
-    //TODO: clear input
-
 
     return (
         <section>
