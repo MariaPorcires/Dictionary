@@ -27,7 +27,7 @@ function SearchWord() {
 
     return (
         <section>
-            <input type="text" id="searchWord" placeholder='search' onChange={(event) => setWord(event.target.value)}></input>
+            <input type="text" id="searchWord" value={word} placeholder='search' onChange={(event) => setWord(event.target.value)}></input>
             <button onClick={handleClick}>Search word</button>
             {wordElement}
         </section>

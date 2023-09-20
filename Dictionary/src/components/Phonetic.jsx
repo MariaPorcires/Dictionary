@@ -1,6 +1,6 @@
 function Phonetic(props) {
    
-
+//ena phoentic(uttalet) behöver inte visas
     return(
         <section>
         <p>{props.text}</p>
