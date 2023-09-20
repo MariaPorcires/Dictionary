@@ -4,7 +4,6 @@ import Phonetic from "./Phonetic";
 function Word(props) {
    const {word} = props
    const {phonetic, meanings, phonetics} = word
-   
 
    let meaningElements = [];
   

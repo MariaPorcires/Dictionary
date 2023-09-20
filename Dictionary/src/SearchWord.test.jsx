@@ -11,7 +11,7 @@ it("should be able to write in inputfield", async () => {
     expect(await screen.findByDisplayValue("test")).toBeInTheDocument() 
 })
 
-it("should render inputtext when button is clicked", async () => {
+it("should render text when button is clicked", async () => {
     render(<SearchWord />)
     const textbox = screen.getByRole('textbox');
     const button = screen.getByRole('button');
@@ -28,4 +28,3 @@ it("should display errormessage when button clicked without writing in input", a
 })
 
 //test att input ska vara tomt efter knapp
-//test att errormeddelande ska visas vid tom sökning

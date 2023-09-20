@@ -1,3 +1,4 @@
+import './SearchWord.css'
 import { useState } from 'react'
 import Word from './Word'
 
@@ -32,8 +33,8 @@ function SearchWord() {
 
     return (
         <section>
-            <input type="text" id="searchWord" value={word} placeholder='search' onChange={(event) => setWord(event.target.value)}></input>
-            <button onClick={handleClick}>Search word</button>
+            <input className="search__input" type="text" id="searchWord" value={word} placeholder='Your word' onChange={(event) => setWord(event.target.value)}></input>
+            <button onClick={handleClick}>Search</button>
             {errorMessage && <p>{errorMessage}</p>}
             {wordElement}
         </section>
@@ -41,4 +42,3 @@ function SearchWord() {
 }
 
 export default SearchWord
-
