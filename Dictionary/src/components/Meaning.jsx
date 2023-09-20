@@ -1,5 +1,4 @@
 function Meaning(props) {
- console.log('synonym', props.synonym);
   
  
      return(

@@ -21,3 +21,4 @@ it("should render inputtext when button is clicked", async () => {
 })
 
 //test att input ska vara tomt efter knapp
+//test att errormeddelande ska visas vid tom sökning
