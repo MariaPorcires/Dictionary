@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Word from './Word'
-import Meaning from './Meaning'
 
 function SearchWord() {
     const [data, setData] = useState([])
@@ -23,18 +22,12 @@ function SearchWord() {
         return <Word key={index} word={word} />
     })
 
- 
-
-
-
-
 
     return (
         <section>
             <input type="text" id="searchWord" placeholder='search' onChange={(event) => setWord(event.target.value)}></input>
             <button onClick={handleClick}>Search word</button>
             {wordElement}
-            {/* {meaningElements} */}
         </section>
     )
 }

@@ -1,27 +1,33 @@
 import Meaning from "./Meaning";
+import Phonetic from "./Phonetic";
 
 function Word(props) {
-   //mapa meanings etc eller fler komponenter
    const {word} = props
-   const {phonetic, meanings} = word
-console.log(word);
-console.log(phonetic);
-console.log(meanings);
-   let meaningElements = [];
+   const {phonetic, meanings, phonetics} = word
+   
 
+   let meaningElements = [];
+  
    if (meanings) {
        meaningElements = meanings.map((meaning, meaningIndex) => {
-           return <Meaning key={meaningIndex} meaning={meaning.partOfSpeech} definition={meaning.definitions[0]?.definition}/>
-
+           return <Meaning key={meaningIndex} meaning={meaning.partOfSpeech} definition={meaning.definitions[0]?.definition} synonym={meaning.synonyms[0]?.synonym} />
        })
+   }
+
+   let phoneticElements = [];
+
+   if(phonetics) {
+      phoneticElements = phonetics.map((phone, phoneIndex) => {
+        return <Phonetic key={phoneIndex} text={phone.text} audio={phone.audio}/>
+      })
    }
 
     return(
         <section>
-            <h3>{word.word}</h3>
+            <h2>{word.word}</h2>
             <p>{phonetic}</p>
             {meaningElements}
-        
+            {phoneticElements}
         
         </section>
     )

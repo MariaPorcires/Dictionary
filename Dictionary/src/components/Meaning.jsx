@@ -1,7 +1,7 @@
 function Meaning(props) {
     //mapa meanings etc eller fler komponenter
     //const {word, phonetic} = props.word
- console.log(props.definition);
+ console.log('synonym', props.synonym);
   
  console.log(props);
  
@@ -9,9 +9,8 @@ function Meaning(props) {
          <section>
              <p>{props.meaning}</p>
              <p>{props.definition}</p>
-             
-         
-         
+             <p>{props.synonym}</p>
+            
          </section>
      )
  }
