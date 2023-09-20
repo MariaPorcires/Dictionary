@@ -22,6 +22,8 @@ function SearchWord() {
         return <Word key={index} word={word} />
     })
 
+    //TODO: clear input
+
 
     return (
         <section>

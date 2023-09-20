@@ -5,8 +5,8 @@ function Meaning(props) {
      return(
          <section>
              <p>{props.meaning}</p>
-             <p>{props.definition}</p>
-             <p>{props.synonym}</p>
+             <p>Definition: {props.definition}</p>
+             <p>Synonyms: {props.synonym}</p>
             
          </section>
      )

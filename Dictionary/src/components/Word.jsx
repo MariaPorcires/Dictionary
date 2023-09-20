@@ -18,7 +18,7 @@ function Word(props) {
 
    if(phonetics) {
       phoneticElements = phonetics.map((phone, phoneIndex) => {
-        return <Phonetic key={phoneIndex} text={phone.text} audio={phone.audio}/>
+        return <Phonetic key={phoneIndex} text={phone.text} audio={phone.audio}/> //lägg till conditional rendering ifall audio inte finns
       })
    }
 
