@@ -10,7 +10,7 @@ function Word(props) {
   
    if (meanings) {
        meaningElements = meanings.map((meaning, meaningIndex) => {
-           return <Meaning key={meaningIndex} meaning={meaning.partOfSpeech} definition={meaning.definitions[0]?.definition} synonym={meaning.synonyms[0]?.synonym} />
+           return <Meaning key={meaningIndex} meaning={meaning.partOfSpeech} definition={meaning.definitions[0]?.definition} synonym={meaning.synonyms} />
        })
    }
 
@@ -35,17 +35,3 @@ function Word(props) {
 
 export default Word
 
-{/* <div>
-{data.map((wordData, index) => (
-   <div key={index}>
-       <h3>{wordData.word}</h3>
-       <p>{wordData.phonetic}</p>
-       <h5>Meanings:</h5>
-           <ul>
-               {wordData.meanings.map((meaning, meaningIndex) => (
-                <li key={meaningIndex}>{meaning.partOfSpeech}{meaning.definition}</li> 
-            ))}
-           </ul>
-    </div>
-    ))}
-</div> */}
