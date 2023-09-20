@@ -9,7 +9,7 @@ function App() {
     <section>
       <header>
         <h1>
-          Mary's dictionary
+        dɪkʃən(ə)ri
         </h1>
       </header>
       <SearchWord />

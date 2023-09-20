@@ -20,7 +20,7 @@ describe('App', () => {
     });
   });
 
-  it("should render Mary's dictonary text", () => {
+  it("should render dɪkʃən(ə)ri text", () => {
     render(<App />);
-    expect(screen.getByText("Mary's dictionary")).toBeInTheDocument();
+    expect(screen.getByText("dɪkʃən(ə)ri")).toBeInTheDocument();
   })
