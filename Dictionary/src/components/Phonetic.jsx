@@ -1,8 +1,10 @@
+import './Phonetic.css'
+
 function Phonetic(props) {
    
 //ena phoentic(uttalet) behöver inte visas
     return(
-        <section>
+        <section className="phonetics">
         <p>{props.text}</p>
         <audio controls>
                   <source src={props.audio} type="audio/mpeg" />

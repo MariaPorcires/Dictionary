@@ -10,6 +10,7 @@
     padding: 10px 20px;
     overflow-x: hidden;
     margin: 1rem;
+    font-family:monospace;
   }
 
 .word__title {

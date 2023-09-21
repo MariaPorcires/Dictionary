@@ -3,11 +3,10 @@
     flex-direction: column;
     border-bottom: 2px solid rgb(118, 109, 96);
     padding: 1rem;
+    font-family:monospace;
   }
 
   p {
     font-size: 15px;
-    font-weight: 400;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-weight: 400;    
   }
