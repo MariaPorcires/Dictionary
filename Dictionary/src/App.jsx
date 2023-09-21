@@ -1,16 +1,13 @@
 import SearchWord from './components/SearchWord'
+import Header from './components/Header'
 import './App.css'
 
 function App() {
-  
+  //gör en headercomponent
 
   return (
     <section>
-      <header>
-        <h1 className='header__title'>
-        dɪkʃən(ə)ri
-        </h1>
-      </header>
+       <Header />
       <SearchWord />
     </section>
   )

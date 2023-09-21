@@ -20,7 +20,7 @@ it("should render text when button is clicked", async () => {
     expect(textbox).toHaveValue('Hello');
 })
 
-it("should display errormessage when button clicked without writing in input", async () => {
+it("should display errormessage when button clicked with empty input", async () => {
     render(<SearchWord />)
     const button = screen.getByRole('button');
     await userEvent.click(button);

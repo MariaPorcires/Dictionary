@@ -21,7 +21,7 @@ function SearchWord() {
             setErrorMessage('');
         } else {
             setData([]);
-            setErrorMessage('No Definitions Found.');
+            setErrorMessage('No Definitions Found');
         }
         setWord('');
         console.log('ordet är', data);
