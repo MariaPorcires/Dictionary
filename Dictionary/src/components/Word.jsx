@@ -24,8 +24,8 @@ function Word(props) {
 
     return(
         <section className="word">
-            <h2>{word.word}</h2>
-            <p>{phonetic}</p>
+            <h2 className='word__title'>{word.word}</h2>
+            <p className='word__phonetic'>{phonetic}</p>
             {meaningElements}
             {phoneticElements}
         

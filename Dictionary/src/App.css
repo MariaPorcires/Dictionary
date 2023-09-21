@@ -10,14 +10,6 @@ body {
   min-height: 100vh;
 }
 
-a {
-  color: #939787;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #778264;
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
