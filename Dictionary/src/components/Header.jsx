@@ -2,7 +2,7 @@ import './Header.css'
 
 function Header() {
     return(
-        <section>
+        <section className='header'>
             <h1 className='header__title'>
             dɪkʃən(ə)ri
             </h1>

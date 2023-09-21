@@ -1,3 +1,4 @@
+import './Word.css'
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
 
@@ -22,7 +23,7 @@ function Word(props) {
    }
 
     return(
-        <section>
+        <section className="word">
             <h2>{word.word}</h2>
             <p>{phonetic}</p>
             {meaningElements}

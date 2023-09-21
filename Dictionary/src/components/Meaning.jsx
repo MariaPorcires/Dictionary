@@ -1,8 +1,10 @@
+import './Meaning.css'
+
 function Meaning(props) {
   
  
      return(
-         <section>
+         <section className="meaning__definition">
              <p>{props.meaning}</p>
              <p>Definition: {props.definition}</p>
              <p>Synonyms: {props.synonym}</p>
