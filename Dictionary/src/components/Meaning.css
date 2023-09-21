@@ -1,7 +1,6 @@
 .meaning__definition {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-bottom: 1px solid rgb(246, 233, 210);
     margin: 10px 0;
   }

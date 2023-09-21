@@ -32,9 +32,9 @@ function SearchWord() {
     })
 
     return (
-        <section>
-            <input className="search__input" type="text" id="searchWord" value={word} placeholder='Your word' onChange={(event) => setWord(event.target.value)}></input>
-            <button onClick={handleClick}>Search</button>
+        <section className='searchWord'>
+            <input className="search__input" type="text" id="searchWord" value={word} placeholder='Enter word' onChange={(event) => setWord(event.target.value)}></input>
+            <button onClick={handleClick}>Search word</button>
             {errorMessage && <p>{errorMessage}</p>}
             {wordElement}
         </section>
