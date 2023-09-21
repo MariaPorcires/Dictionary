@@ -5,15 +5,15 @@
     justify-content: center;
 }
 
-.search__input {
-    border-radius: 8px;
-    border: 1px solid transparent;
+/* .search__input {
+    border-style: none;
+    border-bottom: 2px solid rgb(75, 74, 74);
     padding: 0.6em 1.2em;
     font-size: 15px;
     font-weight: 400;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 1rem;
-}
+} */
 
 p {
     font-size: 10px;

@@ -6,7 +6,7 @@ function Phonetic(props) {
     return(
         <section className="phonetics">
         <p>{props.text}</p>
-        <audio controls>
+        <audio controls className='phonetics__audio'>
                   <source src={props.audio} type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>

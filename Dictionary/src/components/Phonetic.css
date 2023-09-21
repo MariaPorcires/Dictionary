@@ -4,3 +4,8 @@
     letter-spacing: 2px;
     font-family:monospace;
 }
+
+.phonetics__audio {
+   border: 1px solid black;
+   border-radius: 2rem;
+}
