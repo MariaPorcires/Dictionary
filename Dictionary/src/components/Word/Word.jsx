@@ -1,6 +1,6 @@
 import './Word.css'
-import Meaning from "./Meaning";
-import Phonetic from "./Phonetic";
+import Meaning from "../Meaning/Meaning";
+import Phonetic from "../Phonetic/Phonetic";
 
 function Word(props) {
    const {word} = props

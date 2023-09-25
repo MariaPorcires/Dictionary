@@ -1,5 +1,5 @@
-import SearchWord from './components/SearchWord'
-import Header from './components/Header'
+import SearchWord from './components/SearchWord/SearchWord'
+import Header from './components/Header/Header'
 import './App.css'
 
 function App() {

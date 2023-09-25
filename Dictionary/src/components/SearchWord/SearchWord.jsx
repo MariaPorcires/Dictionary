@@ -1,6 +1,6 @@
 import './SearchWord.css'
 import { useState } from 'react'
-import Word from './Word'
+import Word from '../Word/Word'
 
 function SearchWord() {
     const [data, setData] = useState([])
@@ -9,7 +9,7 @@ function SearchWord() {
 
     async function handleClick() {
         if(word.trim() === '') {
-            setErrorMessage('Please enter a word to search');
+            setErrorMessage('Please Enter A Word To Search');
       return;
         }
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
@@ -33,7 +33,7 @@ function SearchWord() {
 
     return (
         <section className='searchWord'>
-            <input className="search__input" type="text" id="searchWord" value={word} placeholder='Enter word' onChange={(event) => setWord(event.target.value)}></input>
+            <input className="search__input" type="text" autoComplete='off' id="searchWord" value={word} placeholder='Enter word' onChange={(event) => setWord(event.target.value)}></input>
             <button onClick={handleClick}>Search word</button>
             {errorMessage && <p>{errorMessage}</p>}
             {wordElement}
