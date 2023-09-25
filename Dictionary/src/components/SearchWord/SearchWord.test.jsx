@@ -45,21 +45,9 @@ it("should empty inputfield after searchbutton is clicked", async () => {
     await waitFor(() => expect(input).toHaveValue(""));
   });
 
-  /* describe("searchWord funtion", async () => {
-  
-    render(<SearchWord/>)
-    const user = userEvent.setup()
-    const input = screen.getByRole("textbox");
-    const button = screen.getByRole('button');
-
-    await user.type(input, "hello");
-    await user.click(button);
-
-
-  }) */
-
-  it("should render definition of searched word", async () => {
+/*   it("should render definition of searched word", async () => {
     render(<SearchWord/>);
+    
     const user = userEvent.setup()
     const input = screen.getByRole("textbox");
     const button = screen.getByRole('button');
@@ -71,4 +59,18 @@ it("should empty inputfield after searchbutton is clicked", async () => {
     expect(await screen.findByText("Definition:")).toBeInTheDocument()
   })
 
+  it("should render synonyms of searched word", async () => {
+    render(<SearchWord />);
 
+    const user = userEvent.setup()
+    const input = screen.getByRole("textbox");
+    const button = screen.getByRole('button');
+
+    await user.type(input, "computer");
+    expect(input).toHaveValue("computer");
+    
+    await user.click(button);
+    expect(await screen.findByText("Synonyms:")).toBeInTheDocument
+  })  */
+
+ 

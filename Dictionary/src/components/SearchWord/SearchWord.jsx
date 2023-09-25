@@ -14,7 +14,6 @@ function SearchWord() {
         }
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
         const data = await response.json()
-        console.log(data);
 
         if (Array.isArray(data) && data.length > 0) {
             setData(data)
@@ -24,7 +23,6 @@ function SearchWord() {
             setErrorMessage('No Definitions Found');
         }
         setWord('');
-        console.log('ordet är', data);
     }
 
     const wordElement = data.map((word, index) => {
