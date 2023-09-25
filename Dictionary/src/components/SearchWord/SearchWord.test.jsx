@@ -1,7 +1,9 @@
 import SearchWord from "./SearchWord";
-import { it, expect } from 'vitest';
+import { it, expect, describe } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
+import { waitFor } from "@testing-library/react";
+//import { as } from "vitest/dist/reporters-cb94c88b";
 
 it("should be able to write in inputfield", async () => {
     render(<SearchWord />)
@@ -27,7 +29,7 @@ it("should display errormessage when button clicked with empty input", async () 
     const button = screen.getByRole('button');
 
     await userEvent.click(button);
-    expect(await screen.findByText("Please enter a word to search")).toBeInTheDocument()
+    expect(await screen.findByText("Please Enter A Word To Search")).toBeInTheDocument()
 })
 
 it("should empty inputfield after searchbutton is clicked", async () => {
@@ -40,7 +42,33 @@ it("should empty inputfield after searchbutton is clicked", async () => {
     expect(input).toHaveValue("hello");
 
     await user.click(button);
-    expect(input).toHaveValue("");
+    await waitFor(() => expect(input).toHaveValue(""));
   });
+
+  /* describe("searchWord funtion", async () => {
+  
+    render(<SearchWord/>)
+    const user = userEvent.setup()
+    const input = screen.getByRole("textbox");
+    const button = screen.getByRole('button');
+
+    await user.type(input, "hello");
+    await user.click(button);
+
+
+  }) */
+
+  it("should render definition of searched word", async () => {
+    render(<SearchWord/>);
+    const user = userEvent.setup()
+    const input = screen.getByRole("textbox");
+    const button = screen.getByRole('button');
+
+    await user.type(input, "computer");
+    expect(input).toHaveValue("computer");
+    
+    await user.click(button);
+    expect(await screen.findByText("Definition:")).toBeInTheDocument()
+  })
 
 
