@@ -1,9 +1,18 @@
 import SearchWord from "./SearchWord";
-import { it, expect, describe } from 'vitest';
+import { it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
 //import { as } from "vitest/dist/reporters-cb94c88b";
+
+it("should render inputfield and button on screen", () => {
+    render(<SearchWord />)
+    const input = screen.getByRole("textbox");
+    const button = screen.getByRole('button');
+
+    expect(input).toBeInTheDocument()
+    expect(button).toBeInTheDocument()
+})
 
 it("should be able to write in inputfield", async () => {
     render(<SearchWord />)
