@@ -10,7 +10,7 @@ function Word(props) {
   
    if (meanings) {
        meaningElements = meanings.map((meaning, meaningIndex) => {
-           return <Meaning key={meaningIndex} meaning={meaning.partOfSpeech} definition={meaning.definitions[0]?.definition} synonym={meaning.synonyms} />
+           return <Meaning key={meaningIndex} meaning={meaning.partOfSpeech} definition={meaning.definitions[0]?.definition} example={meaning.definitions[0]?.example} synonym={meaning.synonyms} />
        })
    }
 
