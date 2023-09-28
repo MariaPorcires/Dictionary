@@ -1,5 +1,5 @@
 import './Phonetic.css'
-
+//Hämtar audio med props för att kunna skriva ut på sidan.
 function Phonetic(props) {
    
     return(
